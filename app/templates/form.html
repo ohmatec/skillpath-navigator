@@ -1,0 +1,29 @@
+<!-- app/templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>เลือกทักษะ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-4xl mx-auto py-20 px-6">
+    <div class="bg-white p-8 rounded-3xl shadow-md space-y-6">
+      <h2 class="text-3xl font-bold text-gray-900">🧠 เลือกทักษะที่คุณมี</h2>
+      <form method="post" class="space-y-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {% for skill in skills %}
+            <label class="inline-flex items-center space-x-2 text-sm text-gray-700">
+              <input type="checkbox" name="skills" value="{{ skill }}" class="accent-black">
+              <span>{{ skill }}</span>
+            </label>
+          {% endfor %}
+        </div>
+        <button type="submit" class="mt-6 bg-black text-white rounded-full px-6 py-2 hover:bg-gray-900 transition">
+          วิเคราะห์ตำแหน่งงานที่เหมาะกับคุณ
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

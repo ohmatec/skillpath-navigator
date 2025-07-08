@@ -1,30 +1,41 @@
+<!-- app/templates/result.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SkillPath Navigator – Result</title>
+  <title>ผลวิเคราะห์</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 p-6">
-  <div class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow space-y-6">
-    <h2 class="text-2xl font-bold mb-4">ทักษะที่คุณมี:</h2>
-    <ul class="list-disc pl-5">
-      {% for skill in user_skills %}
-        <li>{{ skill }}</li>
-      {% else %}
-        <li class="text-gray-500">ยังไม่ได้เลือกทักษะใด</li>
-      {% endfor %}
-    </ul>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-5xl mx-auto py-20 px-6">
+    <div class="bg-white p-8 rounded-3xl shadow-lg space-y-10">
+      <h2 class="text-3xl font-bold text-gray-900">📋 ผลการวิเคราะห์ตำแหน่งที่เหมาะสม</h2>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">ผลการวิเคราะห์ตำแหน่งที่เหมาะสม:</h2>
-    {% for job in analysis %}
-      <div class="border p-4 rounded bg-gray-50 mb-4">
-        <h3 class="text-xl font-semibold text-blue-700">{{ job.role }}</h3>
-        <p>เปอร์เซ็นต์ทักษะที่ตรงกัน: <strong>{{ job.match_percent }}%</strong></p>
-        <p class="text-green-600">✔️ ทักษะที่คุณมีตรงกัน: {{ job.matched_skills | join(', ') }}</p>
-        <p class="text-red-600">❗ ทักษะที่ควรเรียนเพิ่ม: {{ job.missing_skills | join(', ') }}</p>
+      {% for job in analysis %}
+        <div class="border-b pb-6 space-y-2">
+          <h3 class="text-xl font-semibold text-gray-800">{{ job.role }}</h3>
+          <p class="text-sm text-gray-500">เปอร์เซ็นต์ตรงกัน: {{ job.match_percent }}%</p>
+          <p class="text-green-700">✔️ ตรงกับทักษะของคุณ: {{ job.matched_skills | join(', ') }}</p>
+          <p class="text-red-600">❗ ควรเรียนเพิ่ม: {{ job.missing_skills | join(', ') }}</p>
+
+          {% if job.learning_path %}
+            <ol class="list-decimal pl-5 mt-2 text-blue-800 text-sm">
+              {% for item in job.learning_path %}
+                <li>
+                  <a href="{{ item.url }}" target="_blank" class="hover:underline text-blue-600">
+                    {{ item.skill }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      <div>
+        <a href="{{ url_for('main.dashboard') }}" class="text-blue-600 hover:underline">ไปยัง Dashboard สรุป</a>
       </div>
-    {% endfor %}
+    </div>
   </div>
 </body>
 </html>
