@@ -1,105 +1,64 @@
-SkillPath Navigator
+# 🚀 SkillPath Navigator  
+> ระบบวิเคราะห์ตำแหน่งงานที่เหมาะสมตามทักษะ พร้อมแนะนำเส้นทางการเรียนรู้เฉพาะบุคคล
 
-📌 Overview
+![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
+![Flask](https://img.shields.io/badge/Framework-Flask-lightgrey)
+![Tailwind](https://img.shields.io/badge/UI-TailwindCSS-blueviolet)
+![Status](https://img.shields.io/badge/Status-MVP--Completed-brightgreen)
 
-SkillPath Navigator เป็น Web Application ที่ช่วยให้ผู้ใช้งานสามารถประเมินทักษะปัจจุบัน (user skills) เทียบกับความต้องการของตำแหน่งงานในตลาดเทคโนโลยีของไทย จากนั้นระบบจะวิเคราะห์ช่องว่างทักษะ (Skill Gap) และแนะนำเส้นทางการเรียนรู้ (Learning Path) เพื่อพร้อมเข้าสู่ตำแหน่งงานที่เหมาะสม
+---
 
-🎯 Key Features
+## 🎯 แนวคิดหลัก
 
-Skill Survey: เก็บและประเมินทักษะที่ผู้ใช้มีผ่านแบบฟอร์ม
+**SkillPath Navigator** คือ Web Application สำหรับช่วยวิเคราะห์ว่า  
+> ✨ “จากทักษะที่คุณมีตอนนี้ – งานไหนเหมาะที่สุด?”  
+> และ ✨ “ควรเรียนรู้อะไรต่อไป เพื่อให้พร้อมสมัครงานจริง?”
 
-Skill Gap Analysis: เปรียบเทียบทักษะกับตำแหน่งงานจริง พร้อมคำนวณ % Match
+ออกแบบโดยเน้น:  
+- ✍️ ฝึกฝนกระบวนการพัฒนา Software Engineering แบบมีโครงสร้าง  
+- 📈 เชื่อมโยงความต้องการในตลาดงานสายเทคโนโลยีไทย  
+- 💼 เหมาะสำหรับใช้เป็น **Portfolio สำหรับสมัครงานในตำแหน่ง Junior Developer / Web Developer**
 
-Personalized Learning Path: แนะนำลิงก์แหล่งเรียนรู้ฟรีสำหรับทักษะที่ยังขาด
+---
 
-Dashboard Summary: สรุปตำแหน่งที่เหมาะสมที่สุด พร้อมรายละเอียดทักษะที่ควรเรียนเพิ่มเติม
+## 🛠️ เทคโนโลยีที่ใช้
 
-🛠️ Tech Stack
+| ด้าน        | เทคโนโลยี             | เหตุผลที่เลือก                                       |
+|-------------|------------------------|-------------------------------------------------------|
+| Backend     | Python + Flask         | Framework เบาแต่ยืดหยุ่น เหมาะกับ MVP               |
+| Frontend    | HTML + TailwindCSS     | สร้าง UI เรียบหรูแบบมืออาชีพ                        |
+| Logic Layer | Custom Skill Analyzer  | วิเคราะห์ Skill Gap ได้แม่นยำ เข้าใจง่าย           |
+| Hosting     | Render (หรือ Railway)  | ฟรี 100% เหมาะกับผู้เริ่มต้น                        |
 
-Layer
+---
 
-Technology
+## 📦 คุณสมบัติหลัก (MVP)
 
-Backend
+- ✅ ฟอร์มเลือกทักษะที่ผู้ใช้มี
+- ✅ วิเคราะห์ตำแหน่งงานที่เหมาะจากฐานข้อมูล
+- ✅ แสดงทักษะที่ตรง / ควรพัฒนา
+- ✅ แนะนำเส้นทางการเรียนรู้แบบลิงก์
+- ✅ Dashboard สรุปภาพรวมดูดี (สไตล์ Apple)
 
-Python 3.x, Flask
+---
 
-Frontend
+## 📈 โครงสร้างโปรเจกต์
 
-HTML5, Tailwind CSS
-
-Data & Logic
-
-pandas, JSON files
-
-Versioning
-
-Git, GitHub
-
-Deployment
-
-Render (Free Tier)
-
-🚀 Installation & Local Setup
-
-Clone the repository
-
-git clone https://github.com/<your-username>/skillpath-navigator.git
-cd skillpath-navigator
-
-Create and activate virtual environment
-
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS / Linux
-source venv/bin/activate
-
-Install dependencies
-
-pip install -r requirements.txt
-
-Run the application
-
-python run.py
-
-Access
-เปิดเบราว์เซอร์ที่ http://127.0.0.1:5000/
-
-🌐 Deployment (Free)
-
-Create a GitHub repository และ Push โค้ดขึ้น GitHub
-
-ลงทะเบียน บน Render.com ฟรี
-
-Connect GitHub account และเลือก Repo skillpath-navigator
-
-Configure Build & Start Commands:
-
-Build Command: pip install -r requirements.txt
-
-Start Command: python run.py
-
-Deploy บน Render ฟรี (HTTPS พร้อม Domain ฟรีแบบ .onrender.com)
-
-🎉 เมื่อ Deploy สำเร็จ แอปจะพร้อมใช้งานออนไลน์ทันที!
-
-📄 Usage
-
-เข้า /survey เพื่อเลือกทักษะ
-
-ระบบจะนำไป /result วิเคราะห์ตำแหน่งงานและ Gap
-
-เข้า /dashboard เพื่อดูสรุปและแผนการเรียนรู้
-
-🤝 Contributing
-
-Fork repository และสร้าง branch ใหม่ เช่น feature/your-feature
-
-ทำงานและ Commit แบบมีความหมาย (e.g. feat: add X)
-
-Pull Request พร้อมคำอธิบายชัดเจน
-
-📜 License
-
-MIT License © 2025 Your Name
+```bash
+skillpath-navigator/
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── templates/
+│   │   ├── index.html          # หน้าแรก
+│   │   ├── form.html           # แบบฟอร์มเลือกทักษะ
+│   │   ├── result.html         # รายงานหลายตำแหน่ง
+│   │   ├── dashboard.html      # หน้าสรุปแบบหรู
+│   ├── services/
+│   │   ├── analyzer.py
+│   │   ├── skill_gap.py
+│   │   ├── learning_path.py
+├── run.py
+├── requirements.txt
+├── .gitignore
+├── README.md
