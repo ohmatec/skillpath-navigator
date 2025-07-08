@@ -35,3 +35,15 @@ def result():
 
     analysis = analyze_skill_gap(user_skills)
     return render_template('result.html', user_skills=user_skills, analysis=analysis)
+
+@main.route('/dashboard')
+def dashboard():
+    user_skills = session.get('user_skills', [])
+    if not user_skills:
+        return redirect(url_for('main.survey'))
+
+    analysis = analyze_skill_gap(user_skills)
+    top_match = analysis[0] if analysis else None
+
+    return render_template('dashboard.html', user_skills=user_skills, top_match=top_match)
+

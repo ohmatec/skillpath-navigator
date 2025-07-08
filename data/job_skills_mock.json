@@ -1,0 +1,62 @@
+[
+  {
+    "role": "Backend Developer",
+    "skills": ["Python", "Flask", "Django", "REST API", "MySQL", "Git"]
+  },
+  {
+    "role": "Frontend Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Git"]
+  },
+  {
+    "role": "Full Stack Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "Git"]
+  },
+  {
+    "role": "Mobile App Developer",
+    "skills": ["Dart", "Flutter", "Android Studio", "Firebase", "Git"]
+  },
+  {
+    "role": "Data Analyst",
+    "skills": ["Python", "pandas", "SQL", "Excel", "Tableau", "Git"]
+  },
+  {
+    "role": "Data Scientist",
+    "skills": ["Python", "pandas", "NumPy", "scikit-learn", "TensorFlow", "Jupyter", "Git"]
+  },
+  {
+    "role": "Data Engineer",
+    "skills": ["Python", "SQL", "Airflow", "ETL", "BigQuery", "Spark", "Git"]
+  },
+  {
+    "role": "DevOps Engineer",
+    "skills": ["Linux", "Docker", "Kubernetes", "CI/CD", "AWS", "Terraform", "Git"]
+  },
+  {
+    "role": "Cloud Engineer",
+    "skills": ["AWS", "Azure", "GCP", "Kubernetes", "Terraform", "Bash", "Git"]
+  },
+  {
+    "role": "Cybersecurity Specialist",
+    "skills": ["Linux", "Networking", "Firewalls", "Penetration Testing", "Wireshark", "Git"]
+  },
+  {
+    "role": "AI/ML Engineer",
+    "skills": ["Python", "TensorFlow", "PyTorch", "scikit-learn", "Deep Learning", "Git"]
+  },
+  {
+    "role": "UX/UI Designer",
+    "skills": ["Figma", "Sketch", "Wireframing", "User Research", "Adobe XD"]
+  },
+  {
+    "role": "Product Manager",
+    "skills": ["Agile", "Scrum", "JIRA", "Communication", "Business Analysis"]
+  },
+  {
+    "role": "QA Tester",
+    "skills": ["Test Case Design", "Selenium", "Postman", "Bug Tracking", "Git"]
+  },
+  {
+    "role": "Game Developer",
+    "skills": ["C#", "Unity", "Game Design", "Physics", "3D Modeling", "Git"]
+  }
+]
