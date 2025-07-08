@@ -62,3 +62,70 @@ skillpath-navigator/
 ├── requirements.txt
 ├── .gitignore
 ├── README.md
+
+
+🧪 วิธีติดตั้งและใช้งาน (Local)
+# Clone โครงการ
+git clone https://github.com/your-username/skillpath-navigator.git
+cd skillpath-navigator
+
+# สร้าง virtual environment
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+
+# ติดตั้ง dependencies
+pip install -r requirements.txt
+
+# รันแอป
+python run.py
+
+เปิดเบราว์เซอร์ที่: http://127.0.0.1:5000
+
+
+
+ การ Deploy ฟรี
+สามารถ Deploy ฟรีบนแพลตฟอร์มเหล่านี้:
+
+Render (แนะนำ) – สมัครบัญชี แล้วเชื่อมกับ GitHub repo → เลือก Python Web App
+
+Railway – รองรับ Flask และ Database ง่าย
+GitHub Pages – เฉพาะ Static HTML
+📌 แนะนำใช้ Render.com
+Push โค้ดขึ้น GitHub
+เข้า render.com → New Web Service
+Connect GitHub → เลือก repo
+ใส่ build command: pip install -r requirements.txt
+ใส่ start command: python run.py
+เลือก Free Plan → Deploy ได้เลย
+
+💡 จุดเด่นทางวิศวกรรม
+    ✅ Code แยกส่วน (Modular) → พร้อมต่อยอด
+
+    ✅ ใช้ Git อย่างเป็นระบบ: Branch, Commit message ดี
+
+    ✅ หน้า UI ใช้ Tailwind แบบดูน่าเชื่อถือ
+
+    ✅ เข้าใจ Skill Gap และแนะนำ Learning Path อย่างชัดเจน
+
+🔧 ส่วนต่อยอด (Stretch Goals)
+    🔐 เพิ่มระบบ Login/Profile
+
+    📄 Export Dashboard เป็น PDF/Text
+
+    🧠 เชื่อมต่อ AI API วิเคราะห์ Resume จริง
+
+    🔎 ดึง Job จาก API จริง (JobsDB, RapidAPI)
+
+🙋‍♂️ ผู้พัฒนา
+    โอม วัฒนวิกย์กรรม – Junior Web Developer
+
+    พัฒนาเพื่อฝึกฝนกระบวนการ Software Engineering และสร้างผลงานที่พร้อมใช้งานจริงในสายงาน IT
+
+📫 ติดต่อ / เชื่อมต่อ
+    GitHub: github.com/ohmatec
+
+    Email: Ohmatec10@gmail.com
+
