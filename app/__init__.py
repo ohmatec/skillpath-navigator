@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_session import Session
-from app import routes
 import os
 
 def create_app():
